@@ -1,0 +1,1349 @@
+/*
+
+Theme Name: Twenty Twelve Webcomics
+Description: A child theme to add webcomic functionality to wordpress default theme "twentytwelve". Creating a clean, responsive, and simple option to be used together with the plugin "webcomic".
+Author: Daniel "Vandalk" Queiroz Porto
+Version: 0.0.2
+Template: twentytwelve
+Webcomic: 4
+
+*/
+
+/* = Original Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     14;
+$line-height: 24;
+
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+	padding: 5px 0;
+	padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+	font-size: 16px
+	font-size: 1.142857143rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.714285714rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+
+	*/
+
+.xdebug-var-dump{
+	line-height: 18px;
+}	
+
+body.custom-font-enabled {
+  font-family: "Raleway", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+body {
+	background-color: white ;	
+	line-height: 0;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-weight:500;
+}
+
+body .site {
+	margin-top: 0;
+	margin-bottom: 48px;
+	margin-bottom: 3.428571429rem;
+}
+
+.full-width{
+	width:100%;
+}
+
+#header-menu.site{
+	width: 100%;
+	max-width: 90%;
+	margin:0 auto;
+	padding:0;
+	overflow: visible;
+}
+
+a {
+	outline: none;
+	color: #a50000;
+}
+
+a:hover,
+a:focus {
+  color: #2d2d2d;
+}
+ 
+.entry-title  a{
+	font-size: 28px;
+	font-size: 2rem;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-weight:500;
+}
+
+.entry-header .entry-title {
+	font-size: 28px;
+	font-size: 2rem;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-weight:500;
+}
+
+.title-meta-text {
+	font-size: 13px;
+	font-size: 0.928571429rem;
+	margin-top:	0;
+	line-height: 1.846153846;
+	color:#757575;
+}
+
+.title-meta-text a,
+.entry-header .comments-link a ,
+footer.entry-meta a{
+	color:#680000;
+}
+
+.title-meta-text a:hover,
+.title-meta-text a:focus,
+.entry-header .comments-link a:hover,
+.entry-header .comments-link a:focus ,
+footer.entry-meta a:hover,
+footer.entry-meta a:focus{
+	color:#2d2d2d;
+}
+
+.entry-header .comments-link {
+  margin-top: 0;
+}
+
+p {
+	font-size: 16px;
+}
+
+.site-header {
+	padding: 12px 0;
+	padding: 0,857142857rem;
+}
+
+.main-navigation ul.nav-menu,
+.main-navigation div.nav-menu > ul {
+	border-bottom: 1px solid #680000;
+	border-top: 1px solid #680000;
+	display: inline-block !important;
+	text-align: center;
+	width: 100%;
+}
+	
+.main-navigation {
+	margin-top: 0;
+	text-align: center;
+}
+
+.main-navigation li {
+	margin:0;
+}
+	
+.main-navigation li a {
+	padding: 0 20px 0 20px;
+	padding: 0 1.428571428rem 0 1.428571428rem;
+ }
+ 
+ img.header-image,
+ img.blog-featured{
+	border-radius: 0;
+	box-shadow: none;
+}
+ 
+ .header-image {
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0;
+	width:100%;	
+ }
+ 
+ .wrapper {
+  margin: 24px 0 0;
+  margin: 1.714285714rem 0 0 0;
+}
+ 
+ .site-content article {
+	border-bottom: 4px double #680000;
+  }
+ 
+ /* Featured Image on BLOG Archives */
+.archive-featured{
+	float:	left;
+	margin: 6px 18px 12px 0;
+}
+  
+ .widget-area .widget h3{
+	margin-bottom: 6px;
+	font-size: 14px;
+ }
+
+.widget-area .widget a:hover,
+.widget-area .widget a:focus{
+	color: #a50000;
+}
+ 
+.widget-area .textwidget li {
+	margin-left: 0;
+}
+
+
+
+ 
+/* -- PAGINATION -- */
+
+.paginationBox {
+	clear: both;
+	display: block;
+	float: left;
+	margin: 1em 0 2em 0;
+}
+ul.pagination {
+	margin: 0px auto 0px auto;
+	padding: 0px 0px 10px 0px;
+	position: relative;
+	font-size: 80%;
+	line-height: 1em;
+	list-style-type: none;
+}
+.pagination li {
+	float: left;
+	vertical-align: middle;
+	background-color: #fff;
+	margin-right: 1px;
+}
+
+
+.pagination span,
+.pagination a {
+	float: left;
+	border: 1px #ededed solid;
+	padding: 3px 9px 4px 9px;
+	text-decoration: none;
+	width: auto;
+	color: #999;
+}
+.pagination a:hover,
+.pagination a:focus {
+	color: #fff;
+	background-color: #777;
+	border-color: #777;
+}
+.pagination .current{
+	padding: 3px 9px 4px 9px;
+	color: #fff;
+	background-color: #777;
+	border: 1px #777 solid;
+}
+
+/* -- END PAGINATION -- */
+ 
+/* -- FOOTER CUSTOMIZATION -- */
+ 
+ footer[role="contentinfo"] {
+	border-top: 1px solid #680000;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	line-height: 2;
+	max-width: 100%;
+	width: 100%;
+	margin-top: 24px;
+	margin-top: 1.714285714rem;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 24px 0;
+	padding: 1.714285714rem 0;
+	background-color: #2d2d2d;
+}
+footer[role="contentinfo"]:after{
+	clear:both;
+	content:"";
+	display:table;
+}
+ 
+footer[role="contentinfo"] a {
+  color: white;
+}
+
+footer[role="contentinfo"] a:hover,
+footer[role="contentinfo"] a:focus{
+  color: #ff5151;
+}
+ 
+.site-info,
+.menu-footer-menu-container {
+	max-width: 960px;
+	padding: 0 24px;
+	margin: 0 auto;
+}
+
+.site-info p {
+	font-size: 14px;
+	color:white;
+}
+
+/* --- REDES SOCIAIS NAV ---*/
+.redes-sociais-wrapper {
+	max-width: 960px;
+	padding: 0 24px;
+	margin: 0 auto 24px auto;
+	font-family: "Raleway","Open-sans",sans serif;
+	color: white;
+	font-size:	13px;
+}
+
+.redes-sociais-wrapper :after {
+	clear:both;
+	content:"";
+	display:table;
+}
+
+#redes-sociais-lista p {
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 6px;
+}
+
+li.social-icons-btn,
+li.social-icons-btn a{
+	float: left;
+	margin-right: 12px;
+	margin-left: 0;
+	text-indent:-9999px;
+	height:50px;
+	width:50px;
+	background-repeat: no-repeat;
+	background-size:200px 600px;
+}
+
+/* ---- REDES SOCIAIS NAV AUTORES ----*/
+
+.redes-sociais-wrapper-autor{
+	max-width: 960px;
+	width: 100%;
+	font-family: "Raleway","Open-sans",sans serif;
+	color: black;
+	font-size:	13px;
+}
+
+.redes-sociais-wrapper-autor ul li{
+	margin-left:0;
+}
+
+p.author-list-title{
+	margin-bottom:6px;
+}
+
+li.website-link{
+	margin-bottom: 12px;
+	list-style-type: none;
+	font-size: 16px;
+}
+
+/* ---- END OF REDES SOCIAIS NAV AUTORES ----*/
+/* --- END OF REDES SOCIAIS NAV ---*/
+
+/* --- REDES SOCIAIS BTN ---*/
+/* ---- Facebook Btn ----*/
+#facebook-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 0;
+}
+
+#facebook-btn:hover,
+#facebook-btn:focus{
+	background-position-x: -50px;
+}
+
+#facebook-btn.flat{
+	background-position-x: -100px;
+}
+
+#facebook-btn.flat:hover,
+#facebook-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF Facebook Btn ----*/
+/* ---- E-mail Btn ----*/
+#email-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -50px;
+}
+
+#email-btn:hover,
+#email-btn:focus{
+	background-position-x: -50px;
+}
+
+#email-btn.flat{
+	background-position-x: -100px;
+}
+
+#email-btn.flat:hover,
+#email-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF E-mail Btn ----*/
+/* ---- Youtube Btn ----*/
+#youtube-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -100px;
+}
+
+#youtube-btn:hover,
+#youtube-btn:focus{
+	background-position-x: -50px;
+}
+
+#youtube-btn.flat{
+	background-position-x: -100px;
+}
+
+#youtube-btn.flat:hover,
+#youtube-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF Youtube Btn ----*/
+/* ---- Pinterest Btn ----*/
+#pinterest-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -150px;
+}
+
+#pinterest-btn:hover,
+#pinterest-btn:focus{
+	background-position-x: -50px;
+}
+
+#pinterest-btn.flat{
+	background-position-x: -100px;
+}
+
+#pinterest-btn.flat:hover,
+#pinterest-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF Pinterest Btn ----*/
+/* ---- Behance Btn ----*/
+#behance-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -200px;
+}
+
+#behance-btn:hover,
+#behance-btn:focus{
+	background-position-x: -50px;
+}
+
+#behance-btn.flat{
+	background-position-x: -100px;
+}
+
+#behance-btn.flat:hover,
+#behance-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF Behance Btn ----*/
+/* ---- LinkedIn Btn ----*/
+#linkedin-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -250px;
+}
+
+#linkedin-btn:hover,
+#linkedin-btn:focus{
+	background-position-x: -50px;
+}
+
+#linkedin-btn.flat{
+	background-position-x: -100px;
+}
+
+#linkedin-btn.flat:hover,
+#linkedin-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF LinkedIn Btn ----*/ 
+/* ---- DeviantArt Btn ----*/
+#deviantart-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -300px;
+}
+
+#deviantart-btn:hover,
+#deviantart-btn:focus{
+	background-position-x: -50px;
+}
+
+#deviantart-btn.flat{
+	background-position-x: -100px;
+}
+
+#deviantart-btn.flat:hover,
+#deviantart-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF DeviantArt Btn ----*/ 
+/* ---- Twitter Btn ----*/
+#twitter-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -350px;
+}
+
+#twitter-btn:hover,
+#twitter-btn:focus{
+	background-position-x: -50px;
+}
+
+#twitter-btn.flat{
+	background-position-x: -100px;
+}
+
+#twitter-btn.flat:hover,
+#twitter-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF Twitter Btn ----*/ 
+/* ---- Blogspot Btn ----*/
+#blogspot-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -400px;
+}
+
+#blogspot-btn:hover,
+#blogspot-btn:focus{
+	background-position-x: -50px;
+}
+
+#blogspot-btn.flat{
+	background-position-x: -100px;
+}
+
+#blogspot-btn.flat:hover,
+#blogspot-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF Blogspot Btn ----*/ 
+/* ---- Flickr Btn ----*/
+#flickr-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -450px;
+}
+
+#flickr-btn:hover,
+#flickr-btn:focus{
+	background-position-x: -50px;
+}
+
+#flickr-btn.flat{
+	background-position-x: -100px;
+}
+
+#flickr-btn.flat:hover,
+#flickr-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF Flickr Btn ----*/ 
+/* ---- Instagram Btn ----*/
+#instagram-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -500px;
+}
+
+#instagram-btn:hover,
+#instagram-btn:focus{
+	background-position-x: -50px;
+}
+
+#instagram-btn.flat{
+	background-position-x: -100px;
+}
+
+#instagram-btn.flat:hover,
+#instagram-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF Instagram Btn ----*/ 
+/* ---- Tumblr Btn ----*/
+#tumblr-btn{
+	background-image: url("images/SocialLinks.png");
+	background-position:0 -550px;
+}
+
+#tumblr-btn:hover,
+#tumblr-btn:focus{
+	background-position-x: -50px;
+}
+
+#tumblr-btn.flat{
+	background-position-x: -100px;
+}
+
+#tumblr-btn.flat:hover,
+#tumblr-btn.flat:focus{
+	background-position-x: -150px;
+}
+/* ---- END OF Tumblr Btn ----*/ 
+/* --- END OF REDES SOCIAIS BTN ---*/
+
+/* --- FOOTER MENU Navigation --- */ 
+
+.menu-footer-menu-container:after {
+	clear:both;
+	content:"";
+	display:table;
+}
+
+.footer-menu-hqs,
+.footer-menu-institucional {
+	float:left;
+	font-size: 14px;
+	font-weight: 700;
+	font-family: "Raleway","Open-sans",sans serif;
+	margin-bottom: 24px;
+	margin-right:24px;
+}
+
+li.footer-menu-hqs a:hover,
+li.footer-menu-hqs a:focus,
+li.footer-menu-institucional a:hover,
+li.footer-menu-institucional a:focus {
+	color: white;
+}
+
+li.footer-menu-hqs ul a:hover,
+li.footer-menu-hqs ul a:focus,
+li.footer-menu-institucional ul a:hover,
+li.footer-menu-institucional ul a:focus {
+	color: #ff5151;
+}
+
+/**** If I ever need to set widths to the footer menu columns, I can do it through here, in conjuction with the ones at min-width 600 */
+/*
+.footer-menu-hqs{
+	width: 100%;
+}
+
+.footer-menu-institucional {
+	width: 100%
+}
+*/
+
+.menu-footer-menu-container ul li ul li{
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.menu-footer-menu-container ul li ul li ul li {
+	margin: 0 0 0 16px;
+	float: none;
+}
+
+.footer-menu-hqs ul li{
+	float: left;
+	margin-right: 48px;
+}
+
+.footer-menu-hqs #menu-item-1427{
+	float:none;
+} 
+/* --- END OF FOOTER MENU Navigation --- */  
+
+/* -- END OF FOOTER CUSTOMIZATION --  */ 
+
+/* -- Author INFO -- */
+
+.author-info {
+	border-top:none;
+	margin: 0 0 12px 0;
+	padding-top: 0;
+	overflow: visible;
+}
+
+.author.archive .author-info {
+	border-top:none;
+	margin: 0 0 48px 0;
+	padding: 0 0 24px 0;
+	overflow: visible;
+	border-bottom: 4px double #680000; 
+}
+
+.author-info-border-top{
+	border-top: 1px solid #ededed;
+	margin: 24px 0 12px 0;
+	padding-top: 12px;
+	overflow: visible;
+}
+
+.author-info-page {
+	border-top:none;
+	margin: 0 0 48px 0;
+	padding-top: 0;
+	overflow: visible;
+}
+
+h2.author-title-archive{
+	margin-top:0;
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-size: 22px;
+	line-height: 1.846153846;
+}
+
+h2.author-title-single{
+	margin-top:0;
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-size: 16px;
+}
+
+.author-avatar{
+	float: left;
+	margin: 0 24px 6px 0;
+}
+
+.author-description{
+	float: none;
+	width:100%;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-weight:500;
+}
+
+.author-description p{
+	font-size:	14px;
+}
+
+.author-description-page{
+	float: none;
+	width:100%;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-weight:500;
+}
+
+/* -- END OF Author INFO -- */
+
+/* -- LOJA ONLINE -- */
+
+article.pagina-loja{
+	float: left;
+	width: 100%;
+	font-family: "Raleway","Open-sans",sans serif;
+	line-height: 1.846153846;
+	font-weight: 500;
+	padding-top: 12px;
+	padding-bottom:12px;
+	margin-bottom:24px;
+	border-bottom: 24px solid #fff;
+	border-top: 24px solid #fff;
+}
+
+.loja-product{
+	float:none;
+	margin-bottom: 24px
+}
+
+.loja-product img{
+	display:block;
+	margin: 0 auto 0 auto;
+}
+
+h2.autor-produto{
+	font-size: 15px;
+	font-weight: 700;
+	margin-top: 6px;
+	line-height:18px;
+}
+
+.loja-online article.pagina-loja .entry-summary{
+	height: auto;
+	overflow: visible;
+}
+
+.loja-online article.pagina-loja .entry-summary p{
+	padding: 0 0 12px 0;
+	margin: 0;
+}
+
+.more-link{
+	text-align: right;
+	display: block;
+}
+
+.elementos-loja-wrapper{
+	text-align:right;
+	padding: 0 32px 0 0;
+	line-height: 1.714285714;
+}
+
+.elementos-loja-wrapper input[type="image"],
+.elementos-loja-wrapper a{
+	float: right;
+	margin-top: 12px;
+	margin-left: 12px;
+}
+
+.elementos-loja-wrapper input[type="image"]:hover,
+.elementos-loja-wrapper input[type="image"]:focus,
+.elementos-loja-wrapper a:hover,
+.elementos-loja-wrapper a:focus{
+	opacity: 0.7;
+}
+
+.preco-cortado{
+	text-decoration: line-through;
+}
+
+.produto-preco{
+	font-size: 20px;
+	font-weight: 700;
+	color: #a50000;
+}
+
+.produto-preco-promo{
+	font-size: 20px;
+	font-weight: 700;
+	color: #a50000;
+}
+
+/* --- Loja Online DESTAQUES --- */
+
+article.promo{
+	padding-top:0;
+	border-bottom: 24px solid #a50000;
+	border-top: none;
+}
+
+article.destaque-sim{
+	padding-top: 24px;
+	border-bottom: 24px solid #a50000;
+	border-top: 24px solid #a50000;
+}
+
+div.promo{
+	width: 100%;
+	background-color: #a50000;
+	margin-bottom:12px;
+}
+h1.promo{
+	font-family: "Raleway","Open-sans",sans serif;
+	line-height: 24px;
+	font-weight: 900;
+	font-size: 18px;
+	text-align: center;
+	color: #a50000;
+	width: 140px;
+	background-color: #fff;
+	margin:	0 auto;
+}
+
+.produto-preco-promo-destaque{
+	font-size: 36px;
+	font-weight: 700;
+	color: #a50000;
+}
+
+/* --- END OF Loja Online DESTAQUE --- */
+
+/* --- Loja Online - Single --- */
+
+.loja-single img.blog-featured {
+	float: none;
+	display:block;
+	margin: 0 auto 12px auto;	
+}
+
+.loja-single .entry-content p {
+	width: 100%;	
+}
+
+.loja-single .elementos-loja-wrapper{
+	float: right;
+	text-align:right;
+	padding: 0 32px 0 0;
+	width: 100%;
+}
+
+a.loja-online-link{
+	line-height: 14px;
+}
+
+/* --- END OF Loja Online - Single --- */
+
+/* -- END OF LOJA ONLINE -- */
+ 
+/* -- WEBCOMIC RELATED STYLING -- */
+ .webcomic-display-wrapper {
+	display: block;
+	width: auto ;
+	background-color: #680000;
+ }
+ 
+  .webcomic-image-wrapper{
+	display: block;
+	max-width: 1040px;
+	width: 100%;
+	margin: 0 auto;
+	
+ }
+ 
+  .webcomic-image-wrapper img {
+	display: block;
+	height: auto;
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+}
+ 
+ .webcomic-display-article-wrapper {
+	margin: 0 auto;
+	max-width:960px;	
+	padding: 24px 40px 0 40px;
+	background-color: white;
+ }
+ 
+ .webcomic-display-article-wrapper article{
+	padding-bottom:24px;
+	padding-bottom:1.714285714rem;
+	border-bottom: 4px double #680000;
+ }
+ 
+.webcomic-display-article-wrapper h1 a {
+	font-family: "Raleway","Open-sans",sans serif;
+	font-size: 32px;
+	font-weight:500;
+	
+}
+
+/* --- WEBCOMIC NAVIGATION --- */
+
+ .webcomic-nav-wrapper {
+	max-width: 1040px;
+	width:100%;
+	margin: 0 auto;
+	color: white;
+	border-bottom: 1px solid #680000;
+	border-top: 1px solid #680000;
+ }
+ .webcomic-nav-wrapper:after {
+	clear:both;
+	content:"";
+	display:table;
+}
+
+ ul.webcomic-nav{
+	max-width: 900px;
+	width:100%;
+	margin: 0 auto;
+ }
+ 
+ .webcomic-nav li {
+	list-style-type: none;
+ } 
+ 
+ 
+ li.webcomic-nav-button a {
+	width: 50%;
+	height:48px;
+	float: left;
+	text-align: center;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-size:24px;
+	font-weight:500;
+	line-height: 48px;
+	color: white;
+	text-decoration:none;
+ }
+ 
+  li.webcomic-nav-button a span{
+	font-size:16px;
+  }
+   
+  li.webcomic-nav-button a:hover,
+  li.webcomic-nav-button a:focus,
+  #webcomic-nav-middle-btn  a:hover,
+  #webcomic-nav-middle-btn  a:focus{
+	color: #680000;
+	background-color:white;
+	font-weight:700;
+ }
+ 
+ #webcomic-nav-middle-btn {
+	width: 100%;
+	height:48px;
+	float: left;
+	text-align: center;	
+	line-height: 48px;
+ }
+ 
+ #webcomic-nav-middle-btn select{
+	width: 80%;
+ }
+ 
+ /* ---- Just in case you use a "Archive" or "Random" option instead of a "DropDown" ----*/
+ #webcomic-nav-middle-btn a{
+	width: 100%;
+	height:inherit;
+	float: left;
+	text-align: center;	
+	line-height: 48px;
+ }
+ 
+/* --- END OF WEBCOMIC NAVIGATION --- */ 
+
+/* --- WEBCOMIC ARCHIVE: collections --- */
+
+.page-content{
+	margin:12px auto 24px auto;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-weight:500;
+	font-size:	16px;
+}
+
+.archive-header{
+	margin-bottom:24px;
+	padding-bottom: 0;
+	
+}
+
+.archive-title{
+	font-family: "Raleway","Open-sans",sans serif;
+	font-weight:900;
+	font-size:	14px;
+}
+
+/* --- END OF WEBCOMIC ARCHIVE: collections --- */ 
+ 
+/* --- WEBCOMIC TEMPLATE: Arquivo Anual --- */
+ 
+.webcomic-archive {
+	width: 100%
+}
+ 
+.webcomic-archive  .webcomic-term{
+	margin-bottom: 48px;
+}
+
+.webcomic-archive .webcomic-term:after,
+.webcomic-archive .webcomics:after {
+	clear:both;
+	content:"";
+	display:table;
+}
+
+.webcomic-archive .webcomic-term-link{
+	display: block;
+	margin:12px auto 0 auto;
+	text-decoration:none;
+	text-indent: -9999px;
+}
+
+.webcomic-archive .webcomic-term-name{
+	line-height: 1.714285714;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-weight:500;
+	font-size:	32px;
+	text-indent: 0px;
+}
+
+.webcomic-archive .webcomic-term-image {
+	text-indent:0px;
+}
+
+.webcomic-archive .webcomic-term-image img{
+	width:	100%;
+	height: auto;
+}
+
+.webcomic-archive .webcomic-term-description{
+	margin:12px auto 24px auto;
+	line-height: 1.714285714;
+	font-family: "Raleway","Open-sans",sans serif;
+	font-weight:500;
+	font-size:	16px;
+}
+
+.webcomic-archive .webcomics li,
+.webcomic-archive .webcomic-term-image{
+	background-color: #680000;
+}
+ 
+.webcomic-archive .webcomics li {
+	float: left;
+	margin-bottom:12px;
+}
+
+.webcomic-archive .webcomics li a img {
+	border-right: 4px solid #fff;
+	border-left: 4px solid #fff;
+} 
+
+.webcomic-archive .webcomic-term-link img:hover,
+.webcomic-archive .webcomic-term-link img:focus,
+.webcomic-archive .webcomics li a:hover,
+.webcomic-archive .webcomics li a:focus{
+	opacity: 0.7;
+}
+ 
+ 
+/* --- WEBCOMIC TEMPLATE: Arquivo Anual --- */
+ 
+ 
+/* -- END OF WEBCOMIC RELATED STYLING -- */
+ 
+ 
+ /* Minimum width of 960 pixels. */
+@media screen and (min-width: 960px) {
+	
+	body .site {
+		box-shadow: none;
+	}
+	/*
+	#header-menu.site {
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	*/
+} 
+/*  END OF Minimum width of 960 pixels. */
+
+/* Minimum width of 600 pixels. */
+@media screen and (min-width: 600px) {
+
+	body.template-front-page .site-content,
+	body.attachment .site-content,{
+		width: 100%;
+	}
+	
+
+	#header-menu.site{
+		margin-bottom:0;
+		padding: 0 24px;
+		padding: 0 1.714285714rem;
+		font-family: "Raleway","Open-sans",sans serif;
+		overflow: visible;
+	}
+	
+	.main-navigation li a{
+		font-size: 14px;
+	}
+	
+	.main-navigation .current-menu-item > a,
+	.main-navigation .current-menu-ancestor > a,
+	.main-navigation .current_page_item > a,
+	.main-navigation .current_page_ancestor > a {
+		color: #fff	;
+		background-color: #680000;
+		font-weight: 700;
+	}
+		
+	.main-navigation li a:hover,
+	.main-navigation li a:focus ,
+	.main-navigation li:hover,
+	.main-navigation li:focus {
+		color: #fff;
+		background-color: #680000;
+		font-weight: 700;
+	}
+
+	.main-navigation li ul li a {
+		color: #fff;
+		background: #680000;
+		border-bottom: 1px solid #680000;
+		font-size: 12px;
+		font-weight: 500;
+	}
+	.main-navigation li ul li a:hover,
+	.main-navigation li ul li a:focus {
+		background: #fff;
+		color: #680000;
+		font-weight: 700;
+	}
+
+	h1.entry-title  a{
+		font-size: 28px;
+		font-size: 2rem;
+		font-family: "Raleway","Open-sans",sans serif;
+		font-weight:500;
+	}
+	
+	.entry-header .entry-title {
+		font-size: 28px;
+		font-size: 2rem;
+		font-family: "Raleway","Open-sans",sans serif;
+		font-weight:500;
+	}
+	
+	/* --- FOOTER FIX --- */
+	.site-info,
+	.menu-footer-menu-container {
+		padding: 0 40px;
+	}
+	
+	.redes-sociais-wrapper {
+		padding: 0 40px;
+	}
+
+	
+	/* --- END OFFOOTER FIX --- */
+	
+	/* --- LOJA ONLINE --- */
+	
+	article.pagina-loja{
+		width: 50%;
+	}
+	
+	.loja-online article.destaque-sim .entry-summary{
+		height: auto;
+	}
+
+	.loja-product{
+		float:left;
+		margin: 0 18px 0 0;
+	}
+
+	.loja-online article.pagina-loja .entry-summary{
+		margin-bottom: 12px;
+		height: 275px;
+		overflow: hidden;
+	}
+
+	.loja-online article.pagina-loja .entry-summary p{
+		padding: 0 32px 12px 0;
+	}
+
+	/* ---- Loja Online DESTAQUE ---- */
+	
+	article.destaque-promo-sim{
+	width: 100%;
+	}
+	
+	article.destaque-sim{
+	width: 100%;
+	}
+	
+	.loja-online article.destaque-sim .entry-summary,
+	.loja-online article.destaque-promo-sim .entry-summary{
+		height: auto;
+		overflow: visible;
+	}
+	
+	.destaque-sim .loja-product,
+	.destaque-promo-sim .loja-product{
+		width: 400px;
+		height: 350px;
+		overflow: hidden;
+		float:left;
+		margin: 0 18px 0 0;
+	}
+	
+	/* ---- END OF Loja Online DESTAQUE ---- */
+	
+	/* ---- Loja Online - Single ---- */
+
+	.loja-single img.blog-featured {
+		float: left;
+		display:block;
+		margin: 0 24px 12px 0;	
+	}
+
+	.loja-single .entry-content p {
+		width: 100%;	
+	}
+
+	/* ---- END OF Loja Online - Single ---- */
+	
+	/* --- END OF LOJA ONLINE --- */
+
+	/* --- WEBCOMIC RELATED STYLING --- */
+	
+	li.webcomic-nav-button a {
+		width: 18%;
+		font-size:18px;
+		font-weight:500;
+	}
+	
+	li.webcomic-nav-button a span{
+		font-size:12px;
+	}
+	
+	.webcomic-display-article-wrapper h1 a {
+		font-family: "Raleway","Open-sans",sans serif;
+		font-size: 32px;
+		font-weight:500;
+	}
+	
+	#webcomic-nav-middle-btn {
+		width: 28%;
+		height:48px;
+		float: left;
+		text-align: center;	
+		line-height: 48px;
+	}
+	
+	/* --- END OF WEBCOMIC RELATED STYLING --- */
+	
+	/*** FOOTER MENU Navigation ***/
+	/**** If I ever need to set widths to the footer menu columns, I can do it through here, in conjuction with the ones at the top */
+	/*
+	.footer-menu-hqs{
+		max-width: 70%;
+	}
+
+	.footer-menu-institucional {
+		max-width: 30%
+	}
+	*/
+	/*** END OF FOOTER MENU Navigation ***/
+}	
+ /* END OF Minimum width of 600 pixels. */
+ 
+ /* Minimum width of 750 pixels. */
+@media screen and (min-width: 750px) {
+
+	/* --- WEBCOMIC RELATED STYLING --- */
+	
+	li.webcomic-nav-button a {
+		width: 18%;
+		font-size:24px;
+	}
+	
+	li.webcomic-nav-button a span{
+		font-size:16px;
+	}
+	
+	.webcomic-display-article-wrapper h1 a {
+		font-family: "Raleway","Open-sans",sans serif;
+		font-size: 32px;
+		font-weight:500;
+	}
+	
+	#webcomic-nav-middle-btn {
+		width: 28%;
+		height:48px;
+		float: left;
+		text-align: center;	
+		line-height: 48px;
+	}
+	
+	/* --- END OF WEBCOMIC RELATED STYLING --- */
+
+}
+/* END OF Minimum width of 750 pixels. */
